@@ -13,23 +13,11 @@
         src="scr/src.mp4"
         autoplay
         playsinline
+        width="auto"
         loop
-        width="100%"
       ></video>
-      <button id="btn" onclick="go()">click</button>
+      <button id="btn" onclick="go()"><span></span></button>
     </div>
   </body>
-  <script>
-    function go() {
-      let video = document.getElementById("scr");
-      let button = document.getElementById("btn");
-      video.play();
-      video.style.display = "block";
-      button.style.display = "none";
-      video.requestFullscreen?.() ||
-        video.mozRequestFullScreen?.() ||
-        video.webkitRequestFullscreen?.() ||
-        video.msRequestFullscreen?.();
-    }
-  </script>
+  <script src="js/min.js"></script>
 </html>
