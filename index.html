@@ -7,6 +7,29 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <video src="scr/скример джефф убийца.mp4" autoplay controls loop width="90% "></video>
+    <div>
+      <video
+        id="scr"
+        src="scr/src.mp4"
+        autoplay
+        playsinline
+        loop
+        width="100%"
+      ></video>
+      <button id="btn" onclick="go()">click</button>
+    </div>
   </body>
+  <script>
+    function go() {
+      let video = document.getElementById("scr");
+      let button = document.getElementById("btn");
+      video.play();
+      video.style.display = "block";
+      button.style.display = "none";
+      video.requestFullscreen?.() ||
+        video.mozRequestFullScreen?.() ||
+        video.webkitRequestFullscreen?.() ||
+        video.msRequestFullscreen?.();
+    }
+  </script>
 </html>

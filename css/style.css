@@ -2,7 +2,25 @@
   margin: 0;
   padding: 0;
 }
-body {
+
+video {
+  display: none;
+}
+div {
+  height: 500px;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+button {
+  width: 400px;
+  height: 200px;
+  font-size: 50px;
+  color: white;
+  background-color: black;
+  border-radius: 50%;
+  border: none;
+  &:hover {
+    opacity: 0.5;
+  }
 }
